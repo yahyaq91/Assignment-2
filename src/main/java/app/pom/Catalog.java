@@ -34,6 +34,33 @@ public class Catalog extends SystemBar {
     @FindBy(xpath = "//button[@name='submit_search']")
     public WebElement submitSearch;
 
+    @FindBy(xpath = "//a[@title='Proceed to checkout']")
+    public WebElement checkoutButton;
+
+    @FindBy(xpath = "//a[@class='button btn btn-default standard-checkout button-medium']")
+    public WebElement confirmShoppingCart;
+
+    @FindBy(xpath = "//button[@name='processAddress']")
+    public WebElement addressConfirmation;
+
+    @FindBy(xpath = "//div[@id='uniform-cgv']")
+    public WebElement checkTermsConditions;
+
+    @FindBy(xpath = "//button[@name='processCarrier']")
+    public WebElement deliveryOptionConfirmation;
+
+    @FindBy(xpath = "//a[@class='bankwire']")
+    public WebElement bankWireOption;
+
+    @FindBy(xpath = "//button[@class='button btn btn-default button-medium']")
+    public WebElement orderConfirmationButton;
+
+    @FindBy(xpath = "//a[@class='button-exclusive btn btn-default']")
+    public WebElement backToOrdersButton;
+
+    @FindBy(xpath = "//a[@class='color-myaccount']")
+    public WebElement orderRef;
+
 
     public Catalog() {
         PageFactory.initElements(driver, this);
@@ -64,6 +91,33 @@ public class Catalog extends SystemBar {
     }
     public void clickSubmitSearchButton(){
         clickOnElement(submitSearch);
+    }
+    public void clickCheckoutButton(){
+        clickOnElement(checkoutButton);
+    }
+    public void clickConfirmShoppingCart(){
+        clickOnElement(confirmShoppingCart);
+    }
+    public void clickAddressConfirmation(){
+        clickOnElement(addressConfirmation);
+    }
+    public void checkToAgreeTermsConditions(){
+        clickOnElement(checkTermsConditions);
+    }
+    public void clickDeliveryOptionConfirmation(){
+        clickOnElement(deliveryOptionConfirmation);
+    }
+    public void clickBankWireOption(){
+        clickOnElement(bankWireOption);
+    }
+    public void clickOrderConfirmationButton(){
+        clickOnElement(orderConfirmationButton);
+    }
+    public void clickBackToOrdersButton(){
+        clickOnElement(backToOrdersButton);
+    }
+    public void clickOrderRef(){
+        clickOnElement(orderRef);
     }
 
 }

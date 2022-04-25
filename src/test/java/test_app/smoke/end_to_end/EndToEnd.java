@@ -1,9 +1,6 @@
 package test_app.smoke.end_to_end;
 
-import app.pom.CreateAccount;
-import app.pom.Homepage;
-import app.pom.Login;
-import app.pom.MyAccount;
+import app.pom.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import test_base.TestBasePage;
@@ -31,17 +28,24 @@ public class EndToEnd extends TestBasePage {
         String state = GenerateData.state();
         String zipCode = GenerateData.zipCode();
         String phoneNumber = GenerateData.mobilePhone();
-
-        MyAccount myAccount = createAccount.registerNewUser(firstName, lastName, password, day, monthNumber, year,
+        createAccount.registerNewUser(firstName, lastName, password, day, monthNumber, year,
                 streetAddress, city, state, zipCode, phoneNumber);
 
-        String name = getElementText(myAccount.accountButton);
-        String[] splitName = name.split(" ");
-        String actualFirstName = splitName[0];
-        String actualLastName = splitName[1];
+        Catalog catalog = homepage.selectTShirtOption();
+        catalog.clickFadedShortSleeveOption();
+        catalog.setProductQuantity(2);
+        catalog.selectSize(0);
+        catalog.pressAddToCartButton();
+        catalog.clickCheckoutButton();
+        catalog.clickConfirmShoppingCart();
+        catalog.clickAddressConfirmation();
+        catalog.checkToAgreeTermsConditions();
+        catalog.clickDeliveryOptionConfirmation();
+        catalog.clickBankWireOption();
+        catalog.clickOrderConfirmationButton();
+        catalog.clickBackToOrdersButton();
+        catalog.clickOrderRef();
 
-        Assert.assertTrue(isElementVisible(myAccount.accountButton));
-        Assert.assertTrue(firstName.equalsIgnoreCase(actualFirstName));
-        Assert.assertTrue(lastName.equalsIgnoreCase(actualLastName));
+        Assert.assertTrue(isElementVisible(catalog.orderRef));
     }
 }

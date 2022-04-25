@@ -5,7 +5,7 @@
     <parameter name="browser" value="chrome"/>
 
     <test name="BAT - Integration">
-        <parameter name="enabled" value="false"/>
+<!--        <parameter name="enabled" value="false"/>-->
         <classes>
             <class name="test_app.build_acceptance.integration.Connectivity"/>
         </classes>
@@ -17,10 +17,23 @@
         </classes>
     </test>
 
-    <test name="Smoke">
+    <test name="Smoke - End_To_End">
         <classes>
             <class name="test_app.smoke.end_to_end.EndToEnd"/>
         </classes>
     </test>
+
+    <test name="Smoke - Transactions">
+        <classes>
+            <class name="test_app.smoke.transactions.AddingItemsToCart"/>
+        </classes>
+    </test>
+
+    <test name="ContactUs">
+        <classes>
+            <class name="app.pom.ContactUsTest"/>
+        </classes>
+    </test>
+
 
 </suite>

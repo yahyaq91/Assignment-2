@@ -33,6 +33,9 @@ public class SystemBar extends BasePage {
     @FindBy(xpath = "//p[@class='alert alert-success']")
     public WebElement messageSentConfirmation;
 
+    @FindBy(xpath = "//p[@class='dark']")
+    public WebElement orderRef;
+
 
 
     @FindBy(xpath = "//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li/a[@title='T-shirts']")
