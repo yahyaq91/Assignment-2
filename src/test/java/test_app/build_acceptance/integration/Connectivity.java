@@ -32,8 +32,8 @@ public class Connectivity extends TestBasePage {
     @Test (groups = {"BAT"}, priority = 2)
     public void testDatabaseConnectivity() throws SQLException {
         database = new Database();
-        String query = "SELECT 1 FROM DUAL";
+        String query = "SELECT * From cars";
         String response = database.executeQueryReadOne(query).toString();
-        Assert.assertEquals(response, "1", "DATABASE NOT CONNECTED");
+        Assert.assertEquals(response, "Audi", "DATABASE NOT CONNECTED");
     }
 }

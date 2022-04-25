@@ -40,28 +40,5 @@ public class AddingItemsToCart extends TestBasePage {
 
         Assert.assertTrue(isElementVisible(catalog.addedToCartConfirmation));
     }
-    @Test
-    public void testFilteringByColor(){
-        Homepage homepage = new Homepage();
-        Catalog catalog = homepage.selectWomenOption();
-        catalog.selectBlackOption();
 
-        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
-    }
-    @Test
-    public void testFilteringByStyle(){
-        Homepage homepage = new Homepage();
-        Catalog catalog = homepage.selectWomenOption();
-        catalog.checkCasualOption();
-
-        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
-    }
-    @Test
-    public void testSearchWithSearchBar(){
-        Homepage homepage = new Homepage();
-        Catalog catalog = homepage.searchBar("dresses");
-        catalog.clickSubmitSearchButton();
-
-        Assert.assertTrue(isElementVisible(catalog.searchConfirmation));
-    }
 }

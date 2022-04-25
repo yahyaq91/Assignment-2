@@ -29,6 +29,18 @@
         </classes>
     </test>
 
+    <test name="Functionality - Filters">
+        <classes>
+            <class name="test_app.functionality.Filters"/>
+        </classes>
+    </test>
+
+    <test name="Functionality - Search Function">
+        <classes>
+            <class name="test_app.functionality.SearchFunction"/>
+        </classes>
+    </test>
+
     <test name="ContactUs">
         <classes>
             <class name="app.pom.ContactUsTest"/>
