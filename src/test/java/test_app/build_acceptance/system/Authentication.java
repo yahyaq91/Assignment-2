@@ -1,6 +1,7 @@
 package test_app.build_acceptance.system;
 
 import app.pom.Homepage;
+import app.pom.Login;
 import app.pom.MyAccount;
 import config.Config;
 import org.testng.Assert;
@@ -20,19 +21,20 @@ public class Authentication extends TestBasePage {
         Assert.assertTrue(isElementVisible(myAccount.accountButton));
     }
 
-//    @Test (groups = {"BAT"}, dataProviderClass = data_providers.DataProviders.class, dataProvider = "DP1")
-//    public void testInvalidLogin(String username, String password) {
-//        Homepage homepage = new Homepage();
-//        Login login = homepage.clickLoginButton();
-//        login.login(username, password);
-//        String expectedText;
-//
-//        if (isElementVisible(login.invalidEmailInputField)) {
-//            expectedText = "Invalid email address.";
-//        } else {
-//            expectedText = "Authentication failed.";
-//        }
-//
-//        Assert.assertTrue(isElementVisible(login.errorMessageBanner) && (getElementText(login.errorMessageText).equals(expectedText)));
-//    }
+    @Test (groups = {"BAT"}, dataProviderClass = data_providers.DataProviders.class, dataProvider = "DP1")
+    public void testInvalidLogin(String username, String password) {
+        Homepage homepage = new Homepage();
+        Login login = homepage.clickLoginButton();
+        login.login(username, password);
+        String expectedText;
+
+        if (isElementVisible(login.invalidEmailInputField)) {
+            expectedText = "Invalid email address.";
+        } else {
+            expectedText = "Authentication failed.";
+        }
+
+        Assert.assertTrue(isElementVisible(login.errorMessageBanner)
+                && (getElementText(login.errorMessageText).equals(expectedText)));
+    }
 }

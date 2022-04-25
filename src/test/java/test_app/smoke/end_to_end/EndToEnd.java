@@ -1,4 +1,4 @@
-package test_app.smoke.registration;
+package test_app.smoke.end_to_end;
 
 import app.pom.CreateAccount;
 import app.pom.Homepage;
@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import test_base.TestBasePage;
 import utils.GenerateData;
 
-public class Registration extends TestBasePage {
+public class EndToEnd extends TestBasePage {
 
     @Test
-    public void testProcessNewUserRegistration() {
+    public void testEndToEndProcess() {
         Homepage homepage = new Homepage();
         Login login = homepage.clickLoginButton();
 
