@@ -7,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login extends SystemBar {
 
-    public static final String URL = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
-
     @FindBy(id = "email_create")
     public WebElement newEmailAddressInputField;
 
@@ -17,9 +15,6 @@ public class Login extends SystemBar {
 
     @FindBy(id = "email")
     public WebElement registeredEmailAddressInputField;
-
-    @FindBy(xpath = "//div[@class='form-group form-error']")
-    public WebElement invalidEmailInputField;
 
     @FindBy(xpath = "//div[@class='form-group form-ok']")
     public WebElement validEmailInputField;
