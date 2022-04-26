@@ -16,10 +16,66 @@ public class Filters extends TestBasePage {
         Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
     }
     @Test
-    public void testFilteringByStyle(){
+    public void testFilteringByStyleCasual(){
         Homepage homepage = new Homepage();
         Catalog catalog = homepage.selectWomenOption();
-        catalog.checkCasualOption();
+        catalog.clickCasualOption();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilteringByStyleDressy(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickDressyOption();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilteringByStyleGirly(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickGirlyOption();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilterCategoryToTops(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickTopsFilter();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilterCategoryToDresses(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickDressesFilter();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilterBySizeS(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickSmallFilter();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilterBySizeM(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickMediumFilter();
+
+        Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
+    }
+    @Test
+    public void testFilterBySizeL(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickLargeFilter();
 
         Assert.assertTrue(isElementVisible(catalog.filterConfirmation));
     }

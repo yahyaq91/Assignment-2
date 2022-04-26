@@ -28,8 +28,14 @@ public class Catalog extends SystemBar {
     @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#color-black']")
     public WebElement colorOptionBlack;
 
-    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category']")
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#styles-casual']")
     public WebElement casualOption;
+
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#styles-dressy']")
+    public WebElement dressyOption;
+
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#styles-girly']")
+    public WebElement girlyOption;
 
     @FindBy(xpath = "//button[@name='submit_search']")
     public WebElement submitSearch;
@@ -61,6 +67,21 @@ public class Catalog extends SystemBar {
     @FindBy(xpath = "//a[@class='color-myaccount']")
     public WebElement orderRef;
 
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#categories-tops']")
+    public WebElement topsFilter;
+
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#categories-dresses']")
+    public WebElement dressesFilter;
+
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#size-s']")
+    public WebElement smallFilter;
+
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#size-m']")
+    public WebElement mediumFilter;
+
+    @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#size-l']")
+    public WebElement largeFilter;
+
 
     public Catalog() {
         PageFactory.initElements(driver, this);
@@ -86,8 +107,14 @@ public class Catalog extends SystemBar {
     public void selectBlackOption(){
         clickOnElement(colorOptionBlack);
     }
-    public void checkCasualOption(){
+    public void clickCasualOption(){
         clickOnElement(casualOption);
+    }
+    public void clickDressyOption(){
+        clickOnElement(dressyOption);
+    }
+    public void clickGirlyOption(){
+        clickOnElement(girlyOption);
     }
     public void clickSubmitSearchButton(){
         clickOnElement(submitSearch);
@@ -119,5 +146,10 @@ public class Catalog extends SystemBar {
     public void clickOrderRef(){
         clickOnElement(orderRef);
     }
+    public void clickTopsFilter(){clickOnElement(topsFilter);}
+    public void clickDressesFilter(){clickOnElement(dressesFilter);}
+    public void clickSmallFilter(){clickOnElement(smallFilter);}
+    public void clickMediumFilter(){clickOnElement(mediumFilter);}
+    public void clickLargeFilter(){clickOnElement(largeFilter);}
 
 }
