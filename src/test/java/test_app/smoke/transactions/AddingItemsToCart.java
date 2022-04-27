@@ -34,7 +34,7 @@ public class AddingItemsToCart extends TestBasePage {
         Homepage homepage = new Homepage();
         Catalog catalog = homepage.selectTShirtOption();
         catalog.clickFadedShortSleeveOption();
-        catalog.selectBlueOption();
+        catalog.selectTShirtBlueOption();
         catalog.selectSize(0);
         catalog.pressAddToCartButton();
 
