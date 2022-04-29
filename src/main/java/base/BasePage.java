@@ -165,6 +165,11 @@ public class BasePage {
         Select select = new Select(element);
         select.selectByVisibleText(visibleText);
     }
+    public void clearSendKeysToElement(WebElement element, String keys) {
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
+        element.clear();
+        element.sendKeys(keys);
+    }
 
     public void selectFromDropdownByIndex(WebElement element, int index) {
         Select select = new Select(element);

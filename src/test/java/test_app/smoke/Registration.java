@@ -1,4 +1,4 @@
-package test_app.smoke.registration;
+package test_app.smoke;
 
 import app.pom.CreateAccount;
 import app.pom.Homepage;
