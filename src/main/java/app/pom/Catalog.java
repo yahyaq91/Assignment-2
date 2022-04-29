@@ -93,6 +93,16 @@ public class Catalog extends SystemBar {
     public WebElement fashionManufacturerFilter;
     @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?id_category=3&controller=category#condition-new']")
     public WebElement conditionNewFilter;
+    @FindBy(xpath = "//a[@class = 'btn btn-default button button-small'][@href = 'http://automationpractice.com/index.php?controller=stores']")
+    public WebElement discoverStoreButton;
+    @FindBy(xpath = "//input[@id='addressInput']")
+    public WebElement enterAddressBar;
+    @FindBy(xpath = "//select[@id='radiusSelect']")
+    public WebElement setRadius;
+    @FindBy(xpath = "//button[@name='search_locations']")
+    public WebElement searchButton;
+    @FindBy(xpath = "//a[@title='All specials']")
+    public WebElement specialsButton;
 
 
     public Catalog() {
@@ -195,5 +205,10 @@ public class Catalog extends SystemBar {
     public void clickInStockFilter(){clickOnElement(inStockFilter);}
     public void clickFashionManufacturerFilter(){clickOnElement(fashionManufacturerFilter);}
     public void clickNewConditionFilter(){clickOnElement(conditionNewFilter);}
+    public void clickDiscoverStoreButton(){clickOnElement(discoverStoreButton);}
+    public void enterSearchData(String keys){sendKeysToElement(enterAddressBar, keys);}
+    public void selectRadius(int index){selectFromDropdownByIndex(setRadius, index);}
+    public void clickSearchButton(){clickOnElement(searchButton);}
+    public void clickSpecialsButton(){clickOnElement(specialsButton);}
 
 }

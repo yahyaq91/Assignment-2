@@ -19,6 +19,7 @@ public class ContactUs extends SystemBar {
     @FindBy(xpath = "//button[@id='submitMessage']")
     public WebElement sendButton;
 
+
     public ContactUs() {
         PageFactory.initElements(driver, this);
     }

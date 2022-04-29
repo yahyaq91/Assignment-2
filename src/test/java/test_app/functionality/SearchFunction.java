@@ -15,4 +15,24 @@ public class SearchFunction extends TestBasePage {
 
         Assert.assertTrue(isElementVisible(catalog.searchConfirmation));
     }
+    @Test
+    public void testSearchForLocalStore(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickDiscoverStoreButton();
+        catalog.enterSearchData("10029");
+        catalog.selectRadius(2);
+        catalog.clickSearchButton();
+
+       Assert.assertTrue(isElementVisible(catalog.locatorConfirmation));
+    }
+    @Test
+    public void testSearchForSpecials(){
+        Homepage homepage = new Homepage();
+        Catalog catalog = homepage.selectWomenOption();
+        catalog.clickSpecialsButton();
+
+        Assert.assertTrue(isElementVisible(catalog.specialsConfirmation));
+    }
+
 }

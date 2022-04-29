@@ -32,5 +32,14 @@ public class ContactUsTest extends TestBasePage {
 
         Assert.assertTrue(isElementVisible(contactUs.messageSentConfirmation));
     }
+    @Test
+    public void testRegisterForNewsletter(){
+        Homepage homepage = new Homepage();
+        String email = GenerateData.email();
+        homepage.newsletterEmailInput(email);
+        homepage.clickNewsletterSubmitButton();
+
+        Assert.assertTrue(isElementVisible(homepage.newsletterRegistrationConfirmation));
+    }
 
 }

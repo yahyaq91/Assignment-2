@@ -19,6 +19,12 @@ public class Homepage extends SystemBar {
     @FindBy(xpath = "//a[@title='Contact Us']")
     public WebElement contactButton;
 
+    @FindBy(xpath = "//input[@id='newsletter-input']")
+    public WebElement newsletterRegistrationEmailInput;
+
+    @FindBy(xpath = "//button[@name='submitNewsletter']")
+    public WebElement newsletterSubmitButton;
+
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
@@ -43,4 +49,6 @@ public class Homepage extends SystemBar {
 
         return new ContactUs();
     }
+    public void newsletterEmailInput(String email){sendKeysToElement(newsletterRegistrationEmailInput, email);}
+    public void clickNewsletterSubmitButton(){clickOnElement(newsletterSubmitButton);}
 }
