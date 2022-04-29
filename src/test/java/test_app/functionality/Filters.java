@@ -2,6 +2,7 @@ package test_app.functionality;
 
 import app.pom.Catalog;
 import app.pom.Homepage;
+import config.Config;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import test_base.TestBasePage;
@@ -10,6 +11,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorBlack(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectBlackOption();
 
@@ -18,6 +23,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorBeige(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectBeigeOption();
 
@@ -26,6 +35,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorBlue(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectBlueOption();
 
@@ -34,6 +47,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorYellow(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectYellowOption();
 
@@ -42,6 +59,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorWhite(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectWhiteOption();
 
@@ -50,6 +71,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorOrange(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectOrangeOption();
 
@@ -58,6 +83,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorGreen(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectGreenOption();
 
@@ -66,6 +95,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByColorPink(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.selectPinkOption();
 
@@ -74,6 +107,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByStyleCasual(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickCasualOption();
 
@@ -82,6 +119,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByStyleDressy(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickDressyOption();
 
@@ -90,6 +131,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilteringByStyleGirly(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickGirlyOption();
 
@@ -98,6 +143,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterCategoryToTops(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickTopsFilter();
 
@@ -106,6 +155,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterCategoryToDresses(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickDressesFilter();
 
@@ -114,6 +167,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterBySizeS(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickSmallFilter();
 
@@ -122,6 +179,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterBySizeM(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickMediumFilter();
 
@@ -130,6 +191,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterBySizeL(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickLargeFilter();
 
@@ -138,6 +203,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByPropertyColorfulDress(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickColorfulDressFilter();
 
@@ -146,6 +215,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByPropertyMaxiDress(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickMaxiDressFilter();
 
@@ -154,6 +227,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByPropertyMidiDress(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickMidiDressFilter();
 
@@ -162,6 +239,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByPropertyShortDress(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickShortDressFilter();
 
@@ -170,6 +251,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByPropertyShortSleeve(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickShortSleeveFilter();
 
@@ -178,6 +263,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByCompositionCotton(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickCottonFilter();
 
@@ -186,6 +275,11 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByCompositionPolyester(){
         Homepage homepage = new Homepage();
+
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickPolyesterFilter();
 
@@ -194,6 +288,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByCompositionViscose(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickViscoseFilter();
 
@@ -202,6 +300,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByAvailability(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickInStockFilter();
 
@@ -210,6 +312,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByManufacturer(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickFashionManufacturerFilter();
 
@@ -218,6 +324,10 @@ public class Filters extends TestBasePage {
     @Test
     public void testFilterByCondition(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickNewConditionFilter();
 

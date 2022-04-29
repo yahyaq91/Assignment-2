@@ -2,6 +2,7 @@ package test_app.functionality;
 
 import app.pom.Catalog;
 import app.pom.Homepage;
+import config.Config;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import test_base.TestBasePage;
@@ -18,6 +19,10 @@ public class SearchFunction extends TestBasePage {
     @Test
     public void testSearchForLocalStore(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickDiscoverStoreButton();
         catalog.enterSearchData("10029");
@@ -29,6 +34,10 @@ public class SearchFunction extends TestBasePage {
     @Test
     public void testSearchForSpecials(){
         Homepage homepage = new Homepage();
+        String username = appConfig.get(Config.AppProperties.USER);
+        String password = appConfig.get(Config.AppProperties.PASSWORD);
+
+        homepage.clickLoginButton().login(username, password);
         Catalog catalog = homepage.selectWomenOption();
         catalog.clickSpecialsButton();
 
