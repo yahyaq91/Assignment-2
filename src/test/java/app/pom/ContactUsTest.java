@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import test_base.TestBasePage;
 import utils.GenerateData;
 
-import static org.testng.Assert.*;
-
 public class ContactUsTest extends TestBasePage {
     @Test
     public void testContactCustomerService(){
@@ -41,5 +39,4 @@ public class ContactUsTest extends TestBasePage {
 
         Assert.assertTrue(isElementVisible(homepage.newsletterRegistrationConfirmation));
     }
-
 }
